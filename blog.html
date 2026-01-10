@@ -1,0 +1,102 @@
+---
+layout: default
+title: Blog
+navbar_title: Blog
+---
+
+<div class="top-space"></div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card border-0 shadow-sm bg-white blog-card">
+            <div class="card-body p-4">
+                <h6 class="mb-4" style="font-size: 1.5rem;">Blogs</h6>
+
+                {% if site.data.profile.blogs %}
+                <div class="blog-list">
+                    {% for blog in site.data.profile.blogs %}
+                    <div class="blog-item mb-3 p-3 {% unless forloop.last %}border-bottom{% endunless %}">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div class="blog-title">
+                                <a href="{{ blog.url }}" target="_blank" rel="noopener" class="blog-link">
+                                    {{ blog.title }}
+                                    <i class="fas fa-external-link-alt fa-sm ml-1"></i>
+                                </a>
+                            </div>
+                            {% if blog.date %}
+                            <div class="blog-date text-muted">
+                                <em>{{ blog.date }}</em>
+                            </div>
+                            {% endif %}
+                        </div>
+                        {% if blog.description %}
+                        <div class="blog-description text-muted mt-2">
+                            {{ blog.description }}
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <p class="text-muted">No blog posts yet.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .blog-card {
+        min-height: calc(100vh - 180px);
+    }
+
+    .blog-item {
+        transition: background-color 0.2s ease;
+        border-radius: 4px;
+    }
+
+    .blog-item:hover {
+        background-color: #f8f9fa;
+    }
+
+    .blog-link {
+        font-size: 1.1rem;
+        color: #007bff;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .blog-link:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+
+    .blog-date {
+        font-size: 0.9rem;
+        white-space: nowrap;
+        margin-left: 1rem;
+    }
+
+    .blog-description {
+        font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+        .blog-link {
+            font-size: 1rem;
+        }
+
+        .blog-date {
+            font-size: 0.85rem;
+        }
+
+        .d-flex {
+            flex-direction: column;
+        }
+
+        .blog-date {
+            margin-left: 0;
+            margin-top: 0.5rem;
+        }
+    }
+</style>

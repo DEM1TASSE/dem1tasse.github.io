@@ -110,6 +110,11 @@ services:
     - name: "ICLR 2025"
       url: "https://iclr.cc/"
 
+blogs:
+  - title: "My 2025 | From Proving Outward to Building Inward"
+    url: "https://dune-squid-524.notion.site/My-2025-From-Proving-Outward-to-Building-Inward-2e46b110c46f801e9316ffe476c1487a"
+    date: "Jan. 2026"
+
 # projects:
 #   - title: "Life Buddy"
 #     image: "assets/images/projects/life-buddy.png"
