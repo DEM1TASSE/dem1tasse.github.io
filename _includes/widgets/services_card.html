@@ -1,0 +1,73 @@
+<div class="row mt-md-2">
+    <div class="col">
+        <div class="card border-0 shadow-sm bg-white">
+            <div class="card-body p-4">
+                {% if site.data.profile.services %}
+                <h6 class="mb-3" style="font-size: 1.5rem;">Services</h6>
+
+                {% if site.data.profile.services.reviewer %}
+                <div class="service-row mb-2 service-text">
+                    <span class="service-category-title mr-2"><strong>Reviewer:</strong></span>
+                    <span class="service-items">
+                        {% for item in site.data.profile.services.reviewer %}
+                        <span class="service-item">
+                            {% if item.url %}
+                            <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.name }}</a>
+                            {% else %}
+                            {{ item.name }}
+                            {% endif %}{% unless forloop.last %}; {% endunless %}
+                        </span>
+                        {% endfor %}
+                    </span>
+                </div>
+                {% endif %}
+
+                {% if site.data.profile.services.volunteer %}
+                <div class="service-row service-text">
+                    <span class="service-category-title mr-2"><strong>Volunteer:</strong></span>
+                    <span class="service-items">
+                        {% for item in site.data.profile.services.volunteer %}
+                        <span class="service-item">
+                            {% if item.url %}
+                            <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.name }}</a>
+                            {% else %}
+                            {{ item.name }}
+                            {% endif %}{% unless forloop.last %}; {% endunless %}
+                        </span>
+                        {% endfor %}
+                    </span>
+                </div>
+                {% endif %}
+
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .service-text {
+        font-size: 1.1rem;
+    }
+
+    .service-category-title {
+        color: #333;
+    }
+
+    .service-item a {
+        color: #007bff;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .service-item a:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        .card-body h6 {
+            font-size: 1.2rem !important;
+        }
+    }
+</style>

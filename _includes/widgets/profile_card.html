@@ -4,24 +4,23 @@
             <div class="card-body pt-md-4 pt-mb-2 px-md-5 px-4 pb-3">
                 <div class="row align-items-center">
                     <!-- 左侧：自我介绍 -->
-                    <div class="col-md-9 p-md-2">
+                    <div class="col-md-8 p-md-2 pr-md-4">
                         <div class="h1 font-weight-normal profile-name">
                             {{ site.data.profile.primary_name }} <small>{{ site.data.profile.secondary_name }}</small>
                         </div>
-                        <div class="text-profile-bio mt-3" {% if site.data.profile.short_bio_text_justify %}style="text-align: justify"{% endif %}>
+                        <div class="text-profile-bio mt-3" {% if site.data.profile.short_bio_text_justify
+                            %}style="text-align: justify" {% endif %}>
                             {{ site.data.profile.short_bio }}
                         </div>
                     </div>
 
                     <!-- 右侧：头像和社交媒体图标 -->
-                    <div class="col-md-3 d-flex flex-column align-items-center">
+                    <div class="col-md-4 d-flex flex-column align-items-center">
                         {% if site.data.profile.portrait_url %}
-                        <div class="portrait-container portrait-offset mb-2" style="--avatar-offset: {{ site.data.profile.portrait_offset | default: '0px' }};">
-                            <img 
-                                src="{{ site.data.profile.portrait_url | relative_url }}" 
-                                class="portrait-img"
-                                data-toggle="tooltip" 
-                                data-placement="top" 
+                        <div class="portrait-container portrait-offset mb-2"
+                            style="--avatar-offset: {{ site.data.profile.portrait_offset | default: '0px' }};">
+                            <img src="{{ site.data.profile.portrait_url | relative_url }}" class="portrait-img"
+                                data-toggle="tooltip" data-placement="top"
                                 title="{{ site.data.profile.portrait_caption }}">
                         </div>
                         {% endif %}
@@ -34,7 +33,8 @@
                             {% endif %}
 
                             {% if site.data.profile.linkedin %}
-                            <a class="px-2" target="_blank" href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}">
+                            <a class="px-2" target="_blank"
+                                href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}">
                                 <i class="fab fa-linkedin"></i>
                             </a>
                             {% endif %}
@@ -51,7 +51,8 @@
                             </a>
                             {% endif %}
 
-                            <a class="px-2" target="_blank" href="{{ '/assets/materials/CV_Demi Wang.pdf' | relative_url }}">
+                            <a class="px-2" target="_blank"
+                                href="{{ '/assets/materials/CV_Demi Wang.pdf' | relative_url }}">
                                 <i class="fas fa-file-alt"></i>
                             </a>
 
@@ -62,7 +63,7 @@
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>
     </div>
 </div>
 
@@ -87,9 +88,9 @@
 {% endif %}
 
 <style>
-@media (max-width: 768px) {
-    .text-profile-bio {
-        font-size: 0.95rem !important;
+    @media (max-width: 768px) {
+        .text-profile-bio {
+            font-size: 0.95rem !important;
+        }
     }
-}
 </style>

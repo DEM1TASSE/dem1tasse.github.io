@@ -11,10 +11,10 @@ navbar_title: Home
 
 <section id="news" class="mb-4">
     {% if site.data.display.homepage.show_news %}
-        {% assign count_news = site.news | size %}
-        {% if count_news > 0 %}
-            {% include widgets/news_card.html limit=site.data.display.homepage.num_news %}
-        {% endif %}
+    {% assign count_news = site.news | size %}
+    {% if count_news > 0 %}
+    {% include widgets/news_card.html limit=site.data.display.homepage.num_news %}
+    {% endif %}
     {% endif %}
 </section>
 
@@ -35,12 +35,12 @@ navbar_title: Home
 
 <section id="publications" class="mb-4">
     {% if site.data.display.homepage.show_selected_publications %}
-        {% assign pubs = site.publications | sort: "date" | reverse | where: "selected", true %}
-        {% 
-            include widgets/publication_card.html 
-            publications=pubs
-            title='<i class="fas fa-star"></i> Selected Publications'
-        %}
+    {% assign pubs = site.publications | sort: "date" | reverse | where: "selected", true %}
+    {%
+    include widgets/publication_card.html
+    publications=pubs
+    title='<i class="fas fa-star"></i> Selected Publications'
+    %}
     {% endif %}
 </section>
 
@@ -65,28 +65,33 @@ navbar_title: Home
     {% include widgets/awards_card.html %}
 </section>
 
+<section id="services" class="mb-4">
+    {% include widgets/services_card.html %}
+</section>
+
 <section id="about">
     {% include widgets/about_me_card.html %}
 </section>
 
 <div class="clustrmap-container text-center my-5">
     <div class="col-6 col-md-4 col-lg-3 mx-auto">
-        <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=XHaXkpOTTE5tc91XdgumuUNVKkhiazgLFtFwzyDAiv4"></script>
+        <script type="text/javascript" id="clstr_globe"
+            src="//clustrmaps.com/globe.js?d=XHaXkpOTTE5tc91XdgumuUNVKkhiazgLFtFwzyDAiv4"></script>
     </div>
 </div>
 
 <style>
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 1.2rem !important;
+    @media (max-width: 768px) {
+        .section-title {
+            font-size: 1.2rem !important;
+        }
+
+        #projects .col-12 {
+            margin-bottom: 1.5rem !important;
+        }
+
+        #projects .col-12:last-child {
+            margin-bottom: 2rem !important;
+        }
     }
-    
-    #projects .col-12 {
-        margin-bottom: 1.5rem !important;
-    }
-    
-    #projects .col-12:last-child {
-        margin-bottom: 2rem !important;
-    }
-}
 </style>

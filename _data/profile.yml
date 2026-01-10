@@ -20,14 +20,13 @@ email: "demiw@andrew.cmu.edu"
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    Hi there👋 I'm Demi Ruohan Wang, a Master's student at <a href="https://lti.cs.cmu.edu/" target="_blank">Carnegie Mellon University, Language Technologies Institute</a>.
+    Hi there 👋 I’m Demi Ruohan Wang, a Master’s student at <a href="https://lti.cs.cmu.edu/" target="_blank">Carnegie Mellon University’s Language Technologies Institute</a>.
   </p>
   <p>
-    In a short term, I'm focused on conducting research on <strong>large language models (LLMs)</strong>, as well as learning to be a <strong>full-stack independent developer</strong>. In the long run, I hope to build a startup and contribute to the development of <strong>AGI</strong>.
+    In the short term, I focus on research in <strong>large language models (LLMs)</strong>, while also working toward becoming a <strong>full-stack independent developer</strong>. In the long run, I hope to build a startup and contribute to the development of <strong>AGI</strong>.
   </p>
   <p>
-    I've gained research experience through internships at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/" target="_blank">Microsoft Research Asia</a>, <a href="https://www.bytedance.com/en/" target="_blank">ByteDance</a> and <a href="https://x.com/osunlp" target="_blank">OSU NLP Group</a> (supervised by <a href="https://ysu1989.github.io/" target="_blank">Prof. Yu Su</a>). 
-    I'm currently interested in <strong>building agents</strong> that can <strong>better understand and execute tasks</strong>, and enhancing <strong>model's multimodal reasoning abilities</strong> to support this.
+    My research interests include building more robust general agents that can better understand and execute tasks, as well as enhancing models’ reasoning abilities to support these capabilities. At CMU, I am fortunate to work with <a href="http://www.phontron.com/" target="_blank">Prof. Graham Neubig</a> on self-evolving web agents. Previously, I conducted research internships at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/" target="_blank">Microsoft Research Asia</a> and the <a href="https://x.com/osunlp" target="_blank">OSU NLP Group</a> (supervised by <a href="https://ysu1989.github.io/" target="_blank">Prof. Yu Su</a>), and worked as a Machine Learning Engineer Intern at <a href="https://www.bytedance.com/en/" target="_blank">ByteDance</a>.
   </p>
   <p>
     I am seeking Summer 2026 internships as a Machine Learning Engineer or Research Scientist. Feel free to reach out if you have relevant opportunities!
@@ -100,6 +99,16 @@ awards:
   date: Sep. 2019
 - name: Honor Roll (Top 5%), American Mathematics Competition 12
   date: Feb. 2018
+
+services:
+  reviewer:
+    - name: "ICLR 2026"
+      url: "https://iclr.cc/"
+    - name: "NeurIPS MTI-LLM Workshop"
+      url: "https://workshop-multi-turn-interaction.github.io"
+  volunteer:
+    - name: "ICLR 2025"
+      url: "https://iclr.cc/"
 
 # projects:
 #   - title: "Life Buddy"
